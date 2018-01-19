@@ -1,0 +1,392 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <android.support.design.widget.CoordinatorLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="false">
+
+        <android.support.design.widget.AppBarLayout
+                android:id="@+id/activity_server_detail_abl_header"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/activity_server_detail_toolbar_heiget"
+                android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+            <android.support.design.widget.CollapsingToolbarLayout
+                    android:id="@+id/activity_server_detail_clt_header"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/activity_server_detail_toolbar_heiget"
+                    app:contentScrim="@color/colorPrimary"
+                    app:layout_scrollFlags="scroll|exitUntilCollapsed"
+                    app:titleEnabled="true">
+
+                <ImageView
+                        android:id="@+id/activity_server_detail_iv_header"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/activity_server_detail_toolbar_heiget"
+                        android:scaleType="fitXY"
+                        app:layout_collapseMode="parallax"
+                        app:layout_collapseParallaxMultiplier="0.7"
+                        app:layout_scrollFlags="scroll|enterAlways|enterAlwaysCollapsed"
+                        android:src="@drawable/mgc"/>
+
+                <android.support.v7.widget.Toolbar
+                        android:id="@+id/activity_server_detail_tb_header"
+                        android:layout_width="match_parent"
+                        android:layout_height="?attr/actionBarSize"
+                        android:layout_marginTop="20dp"
+                        app:layout_collapseMode="pin"
+                        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
+
+            </android.support.design.widget.CollapsingToolbarLayout>
+        </android.support.design.widget.AppBarLayout>
+
+        <android.support.v4.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scrollbars="none"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                app:behavior_overlapTop="40dp">
+
+            <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                <android.support.v7.widget.CardView
+                        android:id="@+id/activity_server_detail_cv_info"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        app:contentPadding="8dp"
+                        app:cardElevation="4dp">
+
+                    <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                        <RelativeLayout
+                                android:id="@+id/activity_server_detail_rl_maininfo"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                            <TextView
+                                    android:id="@+id/activity_server_detail_tv_name"
+                                    android:text="服务器名字"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentTop="true"
+                                    android:layout_marginBottom="8dp"
+                                    android:textSize="20sp"
+                                    android:textColor="@android:color/black"
+                                    android:textStyle="bold"/>
+
+                            <include
+                                    android:id="@+id/activity_server_detail_deliver_title"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/activity_server_detail_tv_name"
+                                    layout="@layout/layout_server_detail_listdeliver"
+                                    ></include>
+
+                            <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/activity_server_detail_deliver_title"
+                                    android:layout_marginTop="10dp"
+                                    android:paddingLeft="8dp"
+                                    android:paddingRight="8dp">
+
+                                <RelativeLayout
+                                        android:id="@+id/activity_server_detail_rl_manager"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content">
+
+                                    <ImageView
+                                            android:id="@+id/activity_server_detail_iv_manager"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:tint="@android:color/darker_gray"
+                                            android:src="@drawable/ic_supervisor_account_white_24dp"
+                                            />
+
+                                    <TextView
+                                            android:id="@+id/activity_server_detail_tv_manager"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_centerVertical="true"
+                                            android:layout_toRightOf="@+id/activity_server_detail_iv_manager"
+                                            android:layout_marginLeft="8dp"
+                                            android:text="服务器管理者"
+                                            android:textSize="16sp"/>
+                                </RelativeLayout>
+
+                                <include
+                                        android:id="@+id/activity_server_detail_deliver_1"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_below="@+id/activity_server_detail_rl_manager"
+                                        layout="@layout/layout_server_detail_listdeliver"
+                                        android:layout_marginTop="8dp"
+                                        android:layout_marginBottom="8dp"
+                                        ></include>
+
+                                <RelativeLayout
+                                        android:id="@+id/activity_server_detail_rl_online"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_below="@+id/activity_server_detail_deliver_1">
+
+                                    <ImageView
+                                            android:id="@+id/activity_server_detail_iv_online"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:tint="@android:color/darker_gray"
+                                            android:src="@drawable/ic_equalizer_black_24dp"/>
+
+                                    <TextView
+                                            android:id="@+id/activity_server_detail_tv_online"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_centerVertical="true"
+                                            android:layout_toRightOf="@+id/activity_server_detail_iv_online"
+                                            android:layout_marginLeft="8dp"
+                                            android:text="在线人数"
+                                            android:textSize="16sp"/>
+                                </RelativeLayout>
+
+                            </RelativeLayout>
+
+                        </RelativeLayout>
+
+                        <include
+                                android:id="@+id/activity_server_detail_divider_info"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/activity_server_detail_rl_maininfo"
+                                android:layout_marginTop="8dp"
+                                layout="@layout/layout_server_detail_listdeliver"
+                                ></include>
+
+                        <RelativeLayout
+                                android:id="@+id/activity_server_detail_rl_serverinfo"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/activity_server_detail_divider_info">
+
+                            <TextView
+                                    android:id="@+id/activity_server_detail_tv_desc"
+                                    android:text="服务器简介"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentTop="true"
+                                    android:layout_alignParentRight="true"
+                                    android:maxLines="1"
+                                    android:ellipsize="end"
+                                    android:paddingLeft="24dp"
+                                    android:paddingRight="24dp"
+                                    android:layout_marginTop="16dp"
+                                    android:gravity="center"
+                                    android:textColor="@android:color/black"/>
+
+                            <TextView
+                                    android:id="@+id/activity_server_detail_tv_moreinfo"
+                                    android:text="了解更多"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:maxLines="1"
+                                    android:ellipsize="end"
+                                    android:paddingLeft="24dp"
+                                    android:paddingRight="24dp"
+                                    android:textColor="?attr/colorAccent"
+                                    android:foreground="?android:attr/selectableItemBackground"
+                                    android:layout_below="@+id/activity_server_detail_tv_desc"
+                                    android:layout_marginTop="8dp"/>
+
+                            <FrameLayout
+                                    android:id="@+id/activity_server_detail_fl_image"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="220dp"
+                                    android:layout_below="@+id/activity_server_detail_tv_moreinfo"
+                                    android:layout_marginTop="16dp"/>
+
+                        </RelativeLayout>
+                    </RelativeLayout>
+
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                        android:id="@+id/activity_server_detail_cv_comment"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/activity_server_detail_cv_info"
+                        android:layout_margin="8dp"
+                        app:contentPadding="8dp"
+                        app:cardElevation="4dp">
+
+                    <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/activity_server_detail_rl_serverinfo">
+
+                        <RelativeLayout
+                                android:id="@+id/activity_server_detail_rl_score"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                            <TextView
+                                    android:id="@+id/activity_server_detail_tv_score"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="40sp"
+                                    android:layout_marginTop="20dp"
+                                    android:layout_marginLeft="40dp"
+                                    android:text="4.3"
+                                    android:textColor="@android:color/black"/>
+
+                            <LinearLayout
+                                    android:id="@+id/activity_server_detail_ll_score_left"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"
+                                    android:layout_alignTop="@+id/activity_server_detail_tv_score"
+                                    android:layout_toRightOf="@+id/activity_server_detail_tv_score"
+                                    android:layout_marginLeft="5dp">
+
+                                <RatingBar
+                                        android:id="@+id/activity_server_detail_rb_score"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:progressTint="#ffd700"
+                                        style="@style/Widget.AppCompat.RatingBar.Small"
+                                        android:numStars="5"
+                                        android:rating="4.3"/>
+
+                                <TextView
+                                        android:id="@+id/activity_server_detail_tv_scorer_num"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_below="@+id/activity_server_detail_rb_score"
+                                        android:layout_marginTop="5dp"
+                                        android:layout_alignLeft="@+id/activity_server_detail_rb_score"
+                                        android:layout_alignRight="@+id/activity_server_detail_rb_score"
+                                        android:gravity="center"
+                                        android:text="250人评分"/>
+                            </LinearLayout>
+                        </RelativeLayout>
+
+                        <Button
+                                android:id="@+id/activity_server_detail_btn_doscore"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/activity_server_detail_rl_score"
+                                android:text="点击评分"
+                                style="@style/Widget.AppCompat.Button.ButtonBar.AlertDialog"
+                                android:textStyle="italic"
+                                android:elevation="0dp"/>
+
+                        <RelativeLayout
+                                android:id="@+id/activity_server_detail_rl_usercomment"
+                                android:layout_width="match_parent"
+                                android:layout_below="@+id/activity_server_detail_btn_doscore"
+                                android:layout_height="wrap_content"
+                                android:paddingBottom="20dp"
+                                android:foreground="?android:attr/selectableItemBackground"
+                                android:clickable="true">
+
+                            <de.hdodenhof.circleimageview.CircleImageView
+                                    android:id="@+id/activity_server_detail_civ_head"
+                                    android:layout_width="60dp"
+                                    android:layout_height="60dp"
+                                    android:layout_marginTop="20dp"
+                                    android:layout_marginLeft="20dp"
+                                    android:src="@drawable/mgc"
+                                    app:civ_border_color="#FFFFFF"
+                                    app:civ_border_width="2dp"/>
+
+                            <TextView
+                                    android:id="@+id/activity_server_detail_tv_nickname"
+                                    android:text="Nickname"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignTop="@+id/activity_server_detail_civ_head"
+                                    android:layout_toRightOf="@+id/activity_server_detail_civ_head"
+                                    android:layout_marginLeft="10dp"
+                                    android:textSize="18sp"
+                                    android:textColor="@color/textNickname"/>
+
+                            <RelativeLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_toRightOf="@+id/activity_server_detail_tv_nickname"
+                                    android:layout_alignTop="@+id/activity_server_detail_tv_nickname"
+                                    android:layout_alignBottom="@+id/activity_server_detail_tv_nickname"
+                                    android:layout_marginLeft="20dp" >
+
+                                <RatingBar
+                                        android:id="@+id/activity_server_detail_rb_usercomment"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerInParent="true"
+                                        android:progressTint="#ffd700"
+                                        style="@style/Widget.AppCompat.RatingBar.Small"/>
+
+                            </RelativeLayout>
+
+                            <TextView
+                                    android:id="@+id/activity_server_detail_tv_usercomment"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignLeft="@+id/activity_server_detail_tv_nickname"
+                                    android:layout_below="@+id/activity_server_detail_tv_nickname"
+                                    android:layout_marginRight="20dp"
+                                    android:text="CommentText"
+                                    android:layout_alignParentBottom="true"/>
+                        </RelativeLayout>
+
+                        <Button
+                                android:id="@+id/activity_server_detail_btn_listscore"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/activity_server_detail_rl_usercomment"
+                                android:text="查看全部评分"
+                                style="@style/Widget.AppCompat.Button.ButtonBar.AlertDialog"
+                                android:textStyle="italic"
+                                android:elevation="0dp"/>
+
+                    </RelativeLayout>
+
+                </android.support.v7.widget.CardView>
+            </RelativeLayout>
+
+        </android.support.v4.widget.NestedScrollView>
+
+        <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/activity_server_detail_iv_icon"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="180dp"
+                android:src="@drawable/mgc"
+                app:civ_border_color="@android:color/white"
+                app:civ_border_width="2dp"
+                app:layout_anchor="@+id/activity_server_detail_clt_header"
+                app:layout_anchorGravity="right"
+                app:layout_behavior="@string/appbar_icon_behavior"/>
+
+        <com.github.clans.fab.FloatingActionButton
+                android:id="@+id/activity_server_detail_fab_play"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|bottom"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="20dp"
+                android:src="@drawable/ic_games_white_24dp"
+                app:fab_colorNormal="@color/colorPrimary"
+                app:fab_colorPressed="@color/colorPrimaryDark"/>
+
+    </android.support.design.widget.CoordinatorLayout>
+</layout>

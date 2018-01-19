@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <android.support.design.widget.AppBarLayout
+                android:id="@+id/activity_user_modify_abl_header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <android.support.v7.widget.Toolbar
+                    android:id="@+id/activity_user_modify_tb_header"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:background="?attr/colorPrimary"
+                    app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+                    app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+        </android.support.design.widget.AppBarLayout>
+
+        <RelativeLayout
+                android:id="@+id/activity_user_modify_rl_head"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:layout_below="@+id/activity_user_modify_abl_header"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true">
+
+            <TextView
+                    android:id="@+id/activity_user_modify_tv_head"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/tv_avatar"
+                    android:textSize="16sp"/>
+            <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/activity_user_modify_civ_head_field"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/activity_user_modify_iv_arrow_head"
+                    android:layout_marginRight="5dp"
+                    android:text="Nickname"/>
+
+            <ImageView
+                    android:id="@+id/activity_user_modify_iv_arrow_head"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_keyboard_arrow_right_black_24dp"
+                    android:tint="@color/textNickname"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+                android:id="@+id/activity_user_modify_rl_nickname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:layout_below="@+id/activity_user_modify_rl_head"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true">
+
+            <TextView
+                    android:id="@+id/activity_user_modify_tv_nickname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/tv_nickname"
+                    android:textSize="16sp"/>
+            <TextView
+                    android:id="@+id/activity_user_modify_tv_nickname_field"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/activity_user_modify_iv_arrow_nickname"
+                    android:layout_marginRight="5dp"
+                    android:text="Nickname"/>
+
+            <ImageView
+                    android:id="@+id/activity_user_modify_iv_arrow_nickname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:src="@drawable/ic_keyboard_arrow_right_black_24dp"
+                    android:tint="@color/textNickname"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+</layout>

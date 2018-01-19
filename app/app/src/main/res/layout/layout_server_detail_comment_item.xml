@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout
+            android:id="@+id/activity_server_detail_rl_usercomment"
+            android:layout_width="match_parent"
+            android:layout_below="@+id/activity_server_detail_btn_doscore"
+            android:layout_height="wrap_content"
+            android:paddingBottom="20dp"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:clickable="true">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/activity_server_detail_civ_head"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/mgc"
+                app:civ_border_color="#FFFFFF"
+                app:civ_border_width="2dp"/>
+
+        <TextView
+                android:id="@+id/activity_server_detail_tv_nickname"
+                android:text="Nickname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/activity_server_detail_civ_head"
+                android:layout_toRightOf="@+id/activity_server_detail_civ_head"
+                android:layout_marginLeft="10dp"
+                android:textSize="18sp"
+                android:textColor="@android:color/black"/>
+
+        <RatingBar
+                android:id="@+id/activity_server_detail_rb_usercomment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/activity_server_detail_tv_nickname"
+                android:layout_toRightOf="@+id/activity_server_detail_tv_nickname"
+                android:layout_marginLeft="10dp"
+                android:progressTint="#ffd700"
+                style="@style/Widget.AppCompat.RatingBar.Small"/>
+
+        <TextView
+                android:id="@+id/activity_server_detail_tv_time"
+                android:text="2333-02-03 23:33"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/activity_server_detail_tv_nickname"
+                android:layout_alignLeft="@+id/activity_server_detail_tv_nickname"
+                android:layout_marginTop="5dp"/>
+
+        <TextView
+                android:id="@+id/activity_server_detail_tv_usercomment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/activity_server_detail_tv_nickname"
+                android:layout_below="@+id/activity_server_detail_tv_time"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="10dp"
+                android:layout_alignParentBottom="true"
+                android:text="CommentText"
+                />
+
+    </RelativeLayout>
+</layout>

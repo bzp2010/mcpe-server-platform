@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <dimen name="activity_server_detail_toolbar_heiget">250dp</dimen>
+
+    <dimen name="status_bar_height">20dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+
+    <!--ToolBarScrollBehavior-->
+    <dimen name="actionbar_size_offset">56dp</dimen>
+
+    <!-- AvatarImageBehavior -->
+    <dimen name="avatar_final_size">40dp</dimen>
+    <dimen name="avatar_final_x">8dp</dimen>
+    <dimen name="toolbar_height">56dp</dimen>
+
+    <!--CardView shadow margin under Lollipop-->
+    <dimen name="card_view_margin">0dp</dimen>
+
+    <!--ContentScrollBehavior-->
+    <dimen name="content_offset">100dp</dimen>
+    <dimen name="content_height">250dp</dimen>
+
+    <!--FloatingImageBehavior-->
+    <dimen name="floating_image_final_size">50dp</dimen>
+    <dimen name="floating_image_final_x">295dp</dimen>
+    <dimen name="floating_image_final_y">45dp</dimen>
+    
+</resources>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#7fb80e</color>
+    <color name="colorPrimaryDark">#6b9b0c</color>
+    <color name="colorAccent">#e91e63</color>
+
+    <color name="textNickname">#2b333b</color>
+    <color name="game_float_joinserver_bg">#b97fb80e</color>
+</resources>

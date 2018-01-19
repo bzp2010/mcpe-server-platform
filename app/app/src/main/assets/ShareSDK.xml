@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DevInfor>
+	<!--分享APPID需配置-->
+	<!--APPKEY在不使用该平台登录时填不填无所谓-->
+	<QQ
+		Id="7"
+		SortId="1"
+		AppId=""
+		AppKey=""
+		ShareByAppClient ="true"
+		BypassApproval = "false"
+		Enable="true" />
+
+	<QZone
+		Enable="false" />
+
+    <Wechat
+        Id="4"
+        SortId="3"
+        AppId=""
+        AppSecret=""
+        BypassApproval="false"
+        Enable="true" />
+    
+    <WechatMoments
+        Id="5"
+        SortId="4"
+        AppId=""
+        AppSecret=""
+        BypassApproval="true"
+        Enable="true" />
+        
+	<WechatFavorite
+        Id="6"
+        SortId="5"
+        AppId=""
+        AppSecret=""
+        Enable="true" />
+	
+</DevInfor>

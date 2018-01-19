@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/game_float_joinserver_radius">
+        <RelativeLayout
+                android:id="@+id/layout_alert_window_joinserver_container"
+                android:layout_width="200dp"
+                android:layout_height="150dp"
+                android:background="@color/game_float_joinserver_bg">
+
+            <Button
+                    android:text="录屏"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:id="@+id/layout_game_float_show_btn_record"
+                    android:textColor="#ffffff"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:textSize="20sp"/>
+
+            <Button
+                    android:text="关闭工具栏"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:id="@+id/layout_game_float_show_btn_close"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:textColor="#ffffff"/>
+        </RelativeLayout>
+    </LinearLayout>
+
+</layout>

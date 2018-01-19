@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.iydhp.app.mcmagicbox">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.READ_LOGS"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+
+    <application
+            android:name=".App"
+            android:icon="@drawable/mgc"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme">
+        <activity
+                android:name=".view.activity.SplashActivity"
+                android:theme="@style/AppTheme.FullScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".view.activity.DispatchActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+
+                <data android:scheme="mgc"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".view.activity.LoginActivity">
+        </activity>
+        <activity android:name=".view.activity.MainActivity">
+        </activity>
+        <activity android:name=".view.activity.ServerDetailActivity">
+        </activity>
+        <activity android:name=".view.activity.ServerCommentActivity">
+        </activity>
+        <activity android:name=".view.activity.UserFavouriteActivity">
+        </activity>
+        <activity android:name=".view.activity.UserModifyActivity">
+        </activity>
+        <activity android:name="com.soundcloud.android.crop.CropImageActivity">
+        </activity>
+        <activity
+                android:name="com.mob.tools.MobUIShell"
+                android:configChanges="keyboardHidden|orientation|screenSize"
+                android:theme="@android:style/Theme.Translucent.NoTitleBar"
+                android:windowSoftInputMode="stateHidden|adjustResize">
+            <intent-filter>
+                <data android:scheme="tencent101xxxxxx"/>
+
+                <action android:name="android.intent.action.VIEW"/>
+
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+
+        <provider
+                android:name="com.tencent.mid.api.MidProvider"
+                android:authorities="com.iydhp.app.mcmagicbox.TENCENT.MID.V3"
+                android:exported="true">
+        </provider>
+
+        <service
+                android:name=".service.WindowService"
+                android:enabled="true"/>
+
+        <activity android:name=".view.activity.PhotoActivity">
+        </activity>
+    </application>
+
+</manifest>

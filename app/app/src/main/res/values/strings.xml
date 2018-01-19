@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">我的世界魔法盒子</string>
+
+    <string name="tv_usercenter">个人中心</string>
+    <string name="tv_server">服务器</string>
+    <string name="tv_help">帮助</string>
+    <string name="tv_joinus">加入我们</string>
+    <string name="tv_nickname">昵称</string>
+    <string name="tv_avatar">头像</string>
+
+    <string name="tb_server_list">服务器列表</string>
+
+    <string name="menu_login">登录</string>
+    <string name="menu_register">注册</string>
+    <string name="menu_resetpwd">重置密码</string>
+    <string name="menu_favourite">收藏</string>
+    <string name="menu_share">分享</string>
+    <string name="menu_submit">提交</string>
+    <string name="menu_search">搜索</string>
+    <string name="menu_setting">设置</string>
+    <string name="menu_logout">退出登录</string>
+
+    <string name="nav_home">首页</string>
+    <string name="nav_search">搜索</string>
+    <string name="nav_user">我</string>
+
+    <string name="btn_change_userinfo">修改个人资料</string>
+
+    <string name="field_prefreence_name">mgc</string>
+
+    <string name="appbar_icon_behavior" translatable="false">com.iydhp.app.mcmagicbox.utils.listener.AppBarIconBehavior</string>
+</resources>

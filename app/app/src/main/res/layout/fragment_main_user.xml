@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <android.support.design.widget.AppBarLayout
+                android:id="@+id/activity_main_user_abl_header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <android.support.v7.widget.Toolbar
+                    android:id="@+id/activity_main_user_tb_header"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:background="?attr/colorPrimary"
+                    app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+                    app:titleTextColor="@android:color/white"
+                    app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+        </android.support.design.widget.AppBarLayout>
+
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/activity_main_user_abl_header">
+
+            <RelativeLayout
+                    android:id="@+id/fragment_main_user_rl_userinfo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:clickable="true">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/fragment_main_user_civ_head"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:src="@drawable/mgc"
+                        app:civ_border_color="#acacac"
+                        app:civ_border_width="2dp"/>
+
+                <TextView
+                        android:id="@+id/fragment_main_user_tv_nickname"
+                        android:text="Nickname"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="9dp"
+                        android:textSize="18sp"
+                        android:textColor="#2b333b"
+                        android:layout_alignParentTop="true"
+                        android:layout_toRightOf="@+id/fragment_main_user_civ_head"
+                        android:layout_toEndOf="@+id/fragment_main_user_civ_head"
+                        android:layout_marginStart="9dp"/>
+
+                <TextView
+                        android:id="@+id/fragment_main_user_tv_score"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@+id/fragment_main_user_tv_nickname"
+                        android:layout_alignBottom="@+id/fragment_main_user_civ_head"
+                        android:text="Score"/>
+
+
+            </RelativeLayout>
+
+            <View
+                    android:id="@+id/fragment_main_user_view_divider1"
+                    android:layout_height="8dp"
+                    android:layout_width="match_parent"
+                    android:background="#e9e9e9"
+                    android:layout_below="@+id/fragment_main_user_rl_userinfo"/>
+
+            <RelativeLayout
+                    android:id="@+id/fragment_main_user_rl_myfavourite"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/fragment_main_user_view_divider1"
+                    android:padding="16dp"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:clickable="true">
+
+                <TextView
+                        android:id="@+id/fragment_main_user_tv_myfavourite"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="我的收藏"/>
+            </RelativeLayout>
+
+            <View
+                    android:id="@+id/fragment_main_user_view_divider2"
+                    android:layout_height="1dp"
+                    android:layout_width="match_parent"
+                    android:background="#e9e9e9"
+                    android:layout_below="@+id/fragment_main_user_rl_myfavourite"/>
+
+            <RelativeLayout
+                    android:id="@+id/fragment_main_user_rl_mycomment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/fragment_main_user_view_divider2"
+                    android:padding="16dp"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:clickable="true">
+
+                <TextView
+                        android:id="@+id/fragment_main_user_btn_mycomment"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="我的评分"/>
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+</layout>
