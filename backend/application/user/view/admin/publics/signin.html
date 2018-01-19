@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<!--[if IE 9]>         <html class="ie9 no-focus" lang="zh"> <![endif]-->
+<!--[if gt IE 9]><!--> <html class="no-focus" lang="zh"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+
+        <title>登录 - {:config('web_site_title')}</title>
+
+        <meta name="description" content="">
+        <meta name="author" content="caiweiming">
+        <meta name="robots" content="noindex, nofollow">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1.0">
+
+        <link rel="shortcut icon" href="__ADMIN_IMG__/favicons/favicon.ico">
+
+        <link rel="icon" type="image/png" href="__ADMIN_IMG__/favicons/favicon-16x16.png" sizes="16x16">
+        <link rel="icon" type="image/png" href="__ADMIN_IMG__/favicons/favicon-32x32.png" sizes="32x32">
+        <link rel="icon" type="image/png" href="__ADMIN_IMG__/favicons/favicon-96x96.png" sizes="96x96">
+        <link rel="icon" type="image/png" href="__ADMIN_IMG__/favicons/favicon-160x160.png" sizes="160x160">
+        <link rel="icon" type="image/png" href="__ADMIN_IMG__/favicons/favicon-192x192.png" sizes="192x192">
+
+        <link rel="apple-touch-icon" sizes="57x57" href="__ADMIN_IMG__/favicons/apple-touch-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="__ADMIN_IMG__/favicons/apple-touch-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="__ADMIN_IMG__/favicons/apple-touch-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="__ADMIN_IMG__/favicons/apple-touch-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="__ADMIN_IMG__/favicons/apple-touch-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="__ADMIN_IMG__/favicons/apple-touch-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="__ADMIN_IMG__/favicons/apple-touch-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="__ADMIN_IMG__/favicons/apple-touch-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="__ADMIN_IMG__/favicons/apple-touch-icon-180x180.png">
+        <link rel="stylesheet" href="__LIBS__/sweetalert/sweetalert.min.css">
+        <link rel="stylesheet" href="__ADMIN_CSS__/bootstrap.min.css">
+        <link rel="stylesheet" id="css-main" href="__ADMIN_CSS__/oneui.css">
+        <link rel="stylesheet" href="__ADMIN_CSS__/dolphin.css">
+    </head>
+    <body>
+        <div class="bg-white pulldown">
+            <div class="content content-boxed overflow-hidden">
+                <div class="row">
+                    <div class="col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3 col-lg-4 col-lg-offset-4">
+                        <div class="push-30-t push-50 animated fadeIn">
+                            <!-- Login Title -->
+                            <div class="text-center">
+                                <img style="width: 100px;" src="{$Think.config.web_site_logo|get_file_path}" alt="{:config('web_site_title')}">
+                                <p class="text-muted push-15-t">{:config('web_site_title')}</p>
+                            </div>
+                            <div class="text-center">
+                                <a class="btn btn-success" href="{:url('user/publics/login')}">登陆后台</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="pulldown push-30-t text-center animated fadeInUp">
+            <small class="text-muted"><span class="js-year-copy"></span> &copy; {:config('dolphin.company_name')}</small>
+        </div>
+
+        <script src="__ADMIN_JS__/core/jquery.min.js"></script>
+        <script src="__ADMIN_JS__/core/bootstrap.min.js"></script>
+        <script src="__ADMIN_JS__/core/jquery.slimscroll.min.js"></script>
+        <script src="__ADMIN_JS__/core/jquery.scrollLock.min.js"></script>
+        <script src="__ADMIN_JS__/core/jquery.appear.min.js"></script>
+        <script src="__ADMIN_JS__/core/jquery.countTo.min.js"></script>
+        <script src="__ADMIN_JS__/core/jquery.placeholder.min.js"></script>
+        <script src="__ADMIN_JS__/core/js.cookie.min.js"></script>
+        <script src="__ADMIN_JS__/app.js"></script>
+
+        <script src="__LIBS__/jquery-validation/jquery.validate.min.js"></script>
+        <script src="__LIBS__/bootstrap-notify/bootstrap-notify.min.js"></script>
+        <script src="__LIBS__/sweetalert/sweetalert.min.js"></script>
+
+        <script src="__ADMIN_JS__/dolphin.js"></script>
+        {:hook('signin_footer')}
+    </body>
+</html>

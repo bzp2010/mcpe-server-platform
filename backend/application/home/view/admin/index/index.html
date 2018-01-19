@@ -1,0 +1,52 @@
+{extend name="./application/admin/view/layout.html" /}
+
+{block name="page-header"}{/block}
+
+{block name="content"}
+<div class="row">
+    {if condition="$isAdmin"}
+    <div class="col-sm-6 col-md-3">
+        <a class="block block-link-hover3 text-center" href="{:url('server/index')}">
+            <div class="block-content block-content-full">
+                <div class="h1 font-w700 text-primary" data-toggle="countTo" data-to="{$allCount|default=0}"></div>
+            </div>
+            <div class="block-content block-content-full block-content-mini bg-gray-lighter text-muted font-w600">服务器总数</div>
+        </a>
+    </div>
+    <div class="col-sm-6 col-md-3">
+        <a class="block block-link-hover3 text-center" href="{:url('verify/index')}">
+            <div class="block-content block-content-full">
+                <div class="h1 font-w700 text-success" data-toggle="countTo" data-to="{$unVerifyCount|default=0}"></div>
+            </div>
+            <div class="block-content block-content-full block-content-mini bg-gray-lighter text-muted font-w600">待审核</div>
+        </a>
+    </div>
+    <div class="col-sm-6 col-md-3">
+        <a class="block block-link-hover3 text-center" href="{:url('category/index')}">
+            <div class="block-content block-content-full">
+                <div class="h1 font-w700 text-success" data-toggle="countTo" data-to="{$categoryCount|default=0}"></div>
+            </div>
+            <div class="block-content block-content-full block-content-mini bg-gray-lighter text-muted font-w600">类别总数</div>
+        </a>
+    </div>
+    {else /}
+    <div class="col-sm-6 col-md-3">
+        <a class="block block-link-hover3 text-center" href="{:url('server/index')}">
+            <div class="block-content block-content-full">
+                <div class="h1 font-w700 text-primary" data-toggle="countTo" data-to="{$allCount|default=0}"></div>
+            </div>
+            <div class="block-content block-content-full block-content-mini bg-gray-lighter text-muted font-w600">我的服务器数量</div>
+        </a>
+    </div>
+    {/if}
+</div>
+{/block}
+
+{block name="script"}
+<script src="__ADMIN_JS__/core/jquery.countTo.min.js"></script>
+<script>
+    jQuery(function () {
+        App.initHelpers(['appear-countTo']);
+    });
+</script>
+{/block}

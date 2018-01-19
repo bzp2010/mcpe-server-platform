@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <title>服主申请</title>
+    <link href="https://cdn.bootcss.com/mdui/0.2.1/css/mdui.css" rel="stylesheet">
+
+    <style>
+        .text-center {
+            text-align: center;
+        }
+
+        .g-recaptcha {
+            display: inline-block;
+        }
+
+        .mdui-textfield {
+            padding-top: 8px;
+        }
+        .text-vertical-center {
+            position: absolute;
+            top: 200px;
+            right: 60px;
+            width: 350px;
+        }
+    </style>
+
+</head>
+<body class="mdui-appbar-with-toolbar mdui-theme-primary-blue mdui-theme-accent-pink">
+
+<header class="mdui-appbar mdui-appbar-fixed mdui-shadow-2">
+    <div class="mdui-toolbar mdui-color-theme">
+        <a class="mdui-typo-title"><strong>服主申请</strong></a>
+        <div class="mdui-toolbar-spacer"></div>
+    </div>
+</header>
+
+
+<div class="mdui-container doc-container" style="margin-top: 16px;">
+
+    <div class="mdui-card mdui-col-lg-12">
+        <div class="mdui-card-content">
+            <a href="https://xcdn.iydhp.com/document/msp_request_form.docx" target="_blank"><h1>下载服主申请表</h1></a>
+            <h2>您的申请码：{$requestCode}</h2>
+        </div>
+    </div>
+
+</div>
+
+<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/mdui/0.2.1/js/mdui.js"></script>
+
+<script src='https://www.recaptcha.net/recaptcha/api.js'></script>
+<script>
+    this.onerror = function handleError(msg,url,l) {return true;};
+    var captchaType = "recaptcha";
+</script>
+<script src='/public/js/login.js'></script>
+
+</body>
+</html>

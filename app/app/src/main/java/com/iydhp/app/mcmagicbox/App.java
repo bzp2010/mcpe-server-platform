@@ -45,25 +45,18 @@ public class App extends Application {
         //updateLoginState();
         Beta.autoCheckUpgrade = true;
         Beta.autoDownloadOnWifi = true;
-        Bugly.init(getApplicationContext(), "e25affcb7a", false);
+        Bugly.init(getApplicationContext(), "", false);
     }
 
     private void initMta() {
         StatConfig.setAutoExceptionCaught(false);
         try {
-            StatService.startStatService(this, "AQ8ZC9W9SI9M", StatConstants.VERSION);
+            StatService.startStatService(this, "", StatConstants.VERSION);
         } catch (MtaSDkException e) {
             e.printStackTrace();
         }
         StatService.trackCustomEvent(this, "onCreate", "");
     }
-
-    /*private void initDatabase() {
-        DaoMaster.DevOpenHelper helper = new DaoMaster.DevOpenHelper(this, "mcmagicbox", null);
-        SQLiteDatabase db = helper.getWritableDatabase();
-        DaoMaster daoMaster = new DaoMaster(db);
-        daoSession = daoMaster.newSession();
-    }*/
 
     private void initFragmentation() {
         Fragmentation.builder()
